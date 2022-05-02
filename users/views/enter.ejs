@@ -1,0 +1,24 @@
+<%- include('header'); -%>
+<div class="container">
+    <div class="event">
+    <h1>Enter Event</h1>
+    <fieldset>
+    <form action="/enter" method="POST">
+        <label for="new_eventcode">Event Code</label>
+        <input type="number" class="input" name="_eventcode" id="new_eventcode" placeholder="Enter event code">
+        <% if(typeof error !== 'undefined'){ %>
+        <div class="err-msg"><%= error %></div><% } %>
+
+        <% if(typeof msg !== 'undefined'){ %>
+        <div class="success-msg"><%= msg %></div><% } %>
+        <input type="submit" value="Add">
+    </fieldset>
+    </form>
+    <br><br>
+    
+    <br><br>
+            <a href="/"><button class="button">Go Back</button></a> 
+
+    
+</div>
+<%- include('footer'); -%>

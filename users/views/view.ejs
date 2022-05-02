@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Details</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <br>
+        <% if(typeof error !== 'undefined'){ %>
+        <div class="err-msg"><%= error %></div><% } %>
+            <br>
+        <% if(typeof msg !== 'undefined'){ %>
+        <div class="success-msg"><%= msg %></div><% } %>
+            <br>
+    <h1>Event Details</h1>
+
+            <table border="1">
+                <tr>
+                    <th>Event Code</th>
+                    <td><%= selectevent.eventcode %></td>
+                </tr>
+                <tr>
+                    <th>Event Name</th>
+                    <td><%= selectevent.eventname %></td>
+                </tr>
+                <tr>
+                    <th>Venue</th>
+                    <td><%= selectevent.venue %></td>
+                </tr>
+                <tr>
+                    <th>Capacity</th>
+                    <td><%= selectevent.capacity %></td>
+                </tr>
+            </table>
+            <br>
+            <div class="change">
+
+            <a href="/add"><button class="buttonl">Entered</button></a> 
+            <a href="/remove"><button class="buttonr">Exited</button></a> 
+
+            </div>
+            <br>
+                        <a href="/enter"><button class="button">Go Back</button></a> 
+
+
+    
+ </div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<%- include('header'); -%>
+<div class="container">
+    <div class="event">
+    <fieldset>
+        <% if(typeof error !== 'undefined'){ %>
+        <div class="err-msg"><%= error %></div><% } %>
+    <h1>Event is full</h1>
+
+        <% if(typeof msg !== 'undefined'){ %>
+        <div class="success-msg"><%= msg %></div><% } %>
+    </fieldset>
+    <br><br>
+    
+    <br><br>
+            <a href="/view"><button class="button">Go Back</button></a> 
+
+    
+</div>
+<%- include('footer'); -%>
